@@ -6,6 +6,8 @@ import SolutionSection from "@/components/SolutionSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import LiaChatSection from "@/components/LiaChatSection";
 import LiaSchedulingSection from "@/components/LiaSchedulingSection";
+import ZapSignAdvBoxSection from "@/components/ZapSignAdvBoxSection";
+import PostContractSection from "@/components/PostContractSection";
 import KanbanSection from "@/components/KanbanSection";
 import DashboardSection from "@/components/DashboardSection";
 import ComparisonTableSection from "@/components/ComparisonTableSection";
