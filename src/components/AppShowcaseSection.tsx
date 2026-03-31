@@ -70,16 +70,12 @@ const AppShowcaseSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 1.1 }}
-            className="flex gap-3"
           >
-            <div className="bg-background border border-border px-5 py-3 rounded-xl flex items-center gap-2 text-[0.8rem] text-muted-foreground">
-              <span className="text-lg">🍎</span> App Store
-              <span className="text-[0.65rem] text-primary font-syne font-bold ml-1">EM BREVE</span>
-            </div>
-            <div className="bg-background border border-border px-5 py-3 rounded-xl flex items-center gap-2 text-[0.8rem] text-muted-foreground">
-              <span className="text-lg">🤖</span> Google Play
-              <span className="text-[0.65rem] text-primary font-syne font-bold ml-1">EM BREVE</span>
-            </div>
+            <img
+              src={appStoreBadges}
+              alt="Disponível na App Store e Google Play"
+              className="h-12 md:h-14 w-auto"
+            />
           </motion.div>
         </div>
 
