@@ -1,22 +1,20 @@
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion } from "motion/react";
+
+const headlines = [
+  { line1: "Seu escritório", accent: "crescendo", stroke: "sozinho." },
+  { line1: "Prospecte, atenda, qualifique", accent: "e feche contratos", stroke: "automaticamente." },
+];
 
 const HeroSection = () => {
   const [headlineIndex, setHeadlineIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setHeadlineIndex((prev) => (prev + 1) % 2);
+      setHeadlineIndex((prev) => (prev + 1) % headlines.length);
     }, 5000);
     return () => clearInterval(interval);
   }, []);
-
-  const headlines = [
-    { line1: "Seu escritório", accent: "crescendo", stroke: "sozinho." },
-    { line1: "Prospecte, atenda, qualifique", accent: "e feche contratos", stroke: "automaticamente." },
-  ];
-
-  const h = headlines[headlineIndex];
 
   return (
     <section className="relative min-h-screen flex flex-col justify-center pt-32 pb-20 px-6 md:px-8 overflow-hidden bg-background">
@@ -39,28 +37,36 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="font-syne text-[0.72rem] font-bold tracking-[0.25em] uppercase text-primary mb-6 flex items-center gap-3"
+          className="font-syne text-[0.72rem] font-bold tracking-[0.25em] uppercase text-primary mb-6 flex flex-wrap items-center gap-3 min-w-0"
         >
-          <span className="w-8 h-0.5 bg-primary" />
-          AdvFull — uma empresa XFull Aceleradora de Negócios
+          <span className="w-8 h-0.5 bg-primary shrink-0" />
+          <span className="min-w-0 break-words">
+            AdvFull — uma empresa XFull Aceleradora de Negócios
+          </span>
         </motion.div>
 
-        <div className="min-h-[180px] md:min-h-[280px] lg:min-h-[380px] flex items-end">
-          <AnimatePresence mode="wait">
-            <motion.h1
-              key={headlineIndex}
-              initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
-              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-              exit={{ opacity: 0, y: -30, filter: "blur(8px)" }}
-              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="font-display text-5xl md:text-7xl lg:text-[7rem] leading-[0.95] tracking-tight text-white-off mb-6"
+        <h1 className="relative isolate m-0 min-h-[180px] md:min-h-[280px] lg:min-h-[380px] pb-6">
+          {headlines.map((h, i) => (
+            <motion.span
+              key={i}
+              initial={false}
+              animate={{
+                opacity: headlineIndex === i ? 1 : 0,
+              }}
+              transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+              className={`absolute inset-x-0 bottom-6 block font-display text-5xl md:text-7xl lg:text-[7rem] leading-[0.95] tracking-tight text-white-off ${
+                headlineIndex === i ? "z-10" : "z-0"
+              }`}
+              aria-hidden={headlineIndex !== i}
             >
-              {h.line1}<br />
-              <span className="text-primary">{h.accent}</span><br />
+              {h.line1}
+              <br />
+              <span className="text-primary">{h.accent}</span>
+              <br />
               <span className="text-stroke-gold text-transparent">{h.stroke}</span>
-            </motion.h1>
-          </AnimatePresence>
-        </div>
+            </motion.span>
+          ))}
+        </h1>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}

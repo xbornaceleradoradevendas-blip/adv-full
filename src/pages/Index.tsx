@@ -22,7 +22,7 @@ import {
 } from "@/components/AdditionalSections";
 
 const Index = () => (
-  <div className="min-h-screen selection:bg-primary selection:text-primary-foreground">
+  <div className="min-h-screen w-full max-w-full min-w-0 overflow-x-hidden selection:bg-primary selection:text-primary-foreground">
     <NavBar />
     <HeroSection />
     <ContrastSection />

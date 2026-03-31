@@ -33,7 +33,7 @@ const renderCell = (value: CellValue) => {
 };
 
 const ComparisonTableSection = () => (
-  <section className="py-28 px-4 md:px-8 bg-secondary">
+  <section className="py-28 px-4 md:px-8 bg-secondary overflow-x-hidden">
     <div className="max-w-5xl mx-auto">
       <div className="text-center mb-14">
         <SectionLabel text="Comparativo" center />
