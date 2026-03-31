@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import SectionLabel from "./SectionLabel";
 import AnimatedHeading from "./AnimatedHeading";
 import xfullApp from "@/assets/xfull-connect-app.png";
+import appStoreBadges from "@/assets/app-store-badges.png";
 
 const features = [
   { emoji: "📊", text: "Dashboard com métricas em tempo real" },
