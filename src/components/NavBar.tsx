@@ -1,11 +1,7 @@
-import { motion } from "motion/react";
 import { MessageSquare } from "lucide-react";
 
 const NavBar = () => (
-  <motion.nav
-    initial={false}
-    animate={{ y: 0 }}
-    transition={{ duration:0}}
+  <nav
     className="fixed top-0 left-0 right-0 z-50 px-6 md:px-8 py-4 flex items-center justify-between bg-background/80 backdrop-blur-xl border-b border-primary/10"
   >
     <div className="font-display text-2xl tracking-widest text-primary">
