@@ -131,8 +131,8 @@ export const ResultsSection = () => (
 
       <div className="grid md:grid-cols-4 gap-6">
         {[
-          { num: "3×", label: "Mais contratos", sub: "Com a mesma estrutura" },
-          { num: "-70%", label: "Carga operacional", sub: "Advogado foca no que importa" },
+          { num: "+10×", label: "Mais contratos", sub: "Com a mesma estrutura" },
+          { num: "-90%", label: "Carga operacional", sub: "Advogado foca no que importa" },
           { num: "24/7", label: "Atendimento ativo", sub: "Sem custo de plantão" },
           { num: "∞", label: "Capacidade", sub: "LIA escala sem limite" },
         ].map((res, i) => (
