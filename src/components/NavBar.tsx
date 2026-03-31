@@ -6,7 +6,7 @@ const NavBar = () => (
     initial={{ y: -100 }}
     animate={{ y: 0 }}
     transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-    className="fixed top-0 left-0 right-0 z-100 px-6 md:px-8 py-4 flex items-center justify-between bg-background/80 backdrop-blur-xl border-b border-primary/10"
+    className="fixed top-0 left-0 right-0 z-50 px-6 md:px-8 py-4 flex items-center justify-between bg-background/80 backdrop-blur-xl border-b border-primary/10"
   >
     <div className="font-display text-2xl tracking-widest text-primary">
       Adv<span className="text-white-off">Full</span>
