@@ -1,16 +1,41 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import NavBar from "@/components/NavBar";
+import HeroSection from "@/components/HeroSection";
+import ContrastSection from "@/components/ContrastSection";
+import ProblemSection from "@/components/ProblemSection";
+import SolutionSection from "@/components/SolutionSection";
+import HowItWorksSection from "@/components/HowItWorksSection";
+import LiaChatSection from "@/components/LiaChatSection";
+import LiaSchedulingSection from "@/components/LiaSchedulingSection";
+import KanbanSection from "@/components/KanbanSection";
+import DashboardSection from "@/components/DashboardSection";
+import {
+  ConnectSection,
+  SquadSection,
+  ComplianceSection,
+  ResultsSection,
+  CTASection,
+  FooterSection,
+} from "@/components/AdditionalSections";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
-  return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
-    </div>
-  );
-};
-
-const Index = PlaceholderIndex;
+const Index = () => (
+  <div className="min-h-screen selection:bg-primary selection:text-primary-foreground">
+    <NavBar />
+    <HeroSection />
+    <ContrastSection />
+    <ProblemSection />
+    <SolutionSection />
+    <HowItWorksSection />
+    <LiaChatSection />
+    <LiaSchedulingSection />
+    <KanbanSection />
+    <DashboardSection />
+    <ConnectSection />
+    <SquadSection />
+    <ComplianceSection />
+    <ResultsSection />
+    <CTASection />
+    <FooterSection />
+  </div>
+);
 
 export default Index;
