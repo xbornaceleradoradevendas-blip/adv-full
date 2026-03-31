@@ -14,7 +14,7 @@ const appointments = [
 const features = [
   { icon: <Calendar className="w-5 h-5" />, text: "Verifica sua agenda em tempo real" },
   { icon: <Check className="w-5 h-5" />, text: "Confirma o horário automaticamente" },
-  { icon: <Bell className="w-5 h-5" />, text: "Envia lembrete antes da consulta" },
+  { icon: <Bell className="w-5 h-5" />, text: "Envia lembrete antes da reunião" },
   { icon: <X className="w-5 h-5" />, text: "Gerencia cancelamentos sem intervenção" },
 ];
 
