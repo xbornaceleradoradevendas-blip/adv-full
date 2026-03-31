@@ -5,16 +5,16 @@ import SectionLabel from "./SectionLabel";
 import AnimatedHeading from "./AnimatedHeading";
 
 const appointments = [
-  { time: "09:00", name: "Consulta — Maria S.", done: true },
+  { time: "09:00", name: "Reunião — Maria S.", done: true },
   { time: "10:30", name: "Reunião — João P.", done: true },
-  { time: "14:00", name: "Consulta — Ana L.", scheduling: true },
+  { time: "14:00", name: "Reunião — Ana L.", scheduling: true },
   { time: "16:00", name: "Retorno — Carlos M.", done: false },
 ];
 
 const features = [
   { icon: <Calendar className="w-5 h-5" />, text: "Verifica sua agenda em tempo real" },
   { icon: <Check className="w-5 h-5" />, text: "Confirma o horário automaticamente" },
-  { icon: <Bell className="w-5 h-5" />, text: "Envia lembrete antes da consulta" },
+  { icon: <Bell className="w-5 h-5" />, text: "Envia lembrete antes da reunião" },
   { icon: <X className="w-5 h-5" />, text: "Gerencia cancelamentos sem intervenção" },
 ];
 
@@ -118,7 +118,7 @@ const LiaSchedulingSection = () => {
                     <span className="text-xs font-syne font-bold text-white-off">LIA via WhatsApp</span>
                   </div>
                   <p className="text-xs text-muted-foreground leading-relaxed">
-                    Olá Ana! Sua consulta com o Dr. Silva foi confirmada para <strong className="text-primary">terça, 14h</strong>. Até lá! ✅
+                    Olá Ana! Sua reunião com o Dr. Silva foi confirmada para <strong className="text-primary">terça, 14h</strong>. Até lá! ✅
                   </p>
                 </motion.div>
               )}
