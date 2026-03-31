@@ -12,7 +12,7 @@ const NavBar = () => (
       Adv<span className="text-white-off">Full</span>
     </div>
     <a
-      href="https://wa.me/551197727"
+      href="https://wa.me/5511977276044"
       className="flex items-center gap-2 bg-primary hover:bg-gold-light text-primary-foreground font-syne font-bold text-xs tracking-widest uppercase px-5 py-2.5 transition-all hover:-translate-y-0.5 clip-path-nav"
     >
       <MessageSquare className="w-3.5 h-3.5" />
