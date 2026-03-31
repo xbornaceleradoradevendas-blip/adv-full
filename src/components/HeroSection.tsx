@@ -13,7 +13,7 @@ const HeroSection = () => {
 
   const headlines = [
     { line1: "Seu escritório", accent: "crescendo", stroke: "sozinho." },
-    { line1: "Prospect, atenda, qualifique", accent: "e feche contratos", stroke: "automaticamente." },
+    { line1: "Prospecte, atenda, qualifique", accent: "e feche contratos", stroke: "automaticamente." },
   ];
 
   const h = headlines[headlineIndex];
@@ -68,7 +68,7 @@ const HeroSection = () => {
           transition={{ duration: 0.7, delay: 0.3 }}
           className="text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed mb-10"
         >
-          <strong className="text-white-off font-medium">Infraestrutura especializada no mundo jurídico</strong> — time de marketing, plataforma completa e <strong className="text-white-off font-medium">IA Multiagêntica</strong> que atende e executa.
+          <strong className="text-white-off font-medium">Infraestrutura especializada no mundo jurídico</strong> — Marketing, Vendas e Processos. Plataforma completa  com <strong className="text-white-off font-medium">IA Multiagêntica</strong> que atende, opera e executa 24/7.
         </motion.p>
 
         <motion.div
@@ -78,7 +78,7 @@ const HeroSection = () => {
           className="flex flex-wrap gap-4 items-center mb-16"
         >
           <a
-            href="https://wa.me/5500000000000"
+            href="https://wa.me/5511977276044"
             className="inline-flex items-center gap-2.5 bg-primary hover:bg-gold-light text-primary-foreground font-syne font-extrabold text-sm tracking-widest uppercase px-9 py-4 transition-all hover:-translate-y-0.5 shadow-[0_0_40px_hsl(43_55%_53%_/_0.3)] hover:shadow-[0_0_60px_hsl(43_55%_53%_/_0.5)] clip-path-polygon"
           >
             ⚡ Quero minha máquina de crescimento

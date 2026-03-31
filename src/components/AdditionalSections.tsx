@@ -176,7 +176,7 @@ export const CTASection = () => (
         transition={{ duration: 0.5, delay: 0.3 }}
       >
         <a
-          href="https://wa.me/5500000000000"
+          href="https://wa.me/5511977276044"
           className="inline-flex items-center gap-3 bg-[#25D366] hover:bg-[#20ba5a] text-background font-syne font-extrabold text-base tracking-widest uppercase px-10 py-5 transition-all hover:-translate-y-1 shadow-[0_0_50px_rgba(37,211,102,0.3)] hover:shadow-[0_0_70px_rgba(37,211,102,0.5)] clip-path-polygon"
         >
           <MessageSquare className="w-5 h-5 fill-current" />

@@ -175,12 +175,10 @@ const AppShowcaseSection = () => (
             className="flex gap-3"
           >
             <div className="bg-card border border-border px-5 py-3 rounded-xl flex items-center gap-2 text-[0.8rem] text-muted-foreground">
-              <span className="text-lg">🍎</span> App Store
-              <span className="text-[0.65rem] text-primary font-syne font-bold ml-1">EM BREVE</span>
+              <span className="text-lg"> </span> App Store
             </div>
             <div className="bg-card border border-border px-5 py-3 rounded-xl flex items-center gap-2 text-[0.8rem] text-muted-foreground">
-              <span className="text-lg">🤖</span> Google Play
-              <span className="text-[0.65rem] text-primary font-syne font-bold ml-1">EM BREVE</span>
+              <span className="text-lg"> </span> Google Play
             </div>
           </motion.div>
         </div>
