@@ -5,7 +5,7 @@ import SectionLabel from "./SectionLabel";
 import AnimatedHeading from "./AnimatedHeading";
 
 const appointments = [
-  { time: "09:00", name: "Consulta — Maria S.", done: true },
+  { time: "09:00", name: "Reunião — Maria S.", done: true },
   { time: "10:30", name: "Reunião — João P.", done: true },
   { time: "14:00", name: "Consulta — Ana L.", scheduling: true },
   { time: "16:00", name: "Retorno — Carlos M.", done: false },
