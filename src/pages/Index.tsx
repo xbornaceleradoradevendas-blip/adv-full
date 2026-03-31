@@ -31,6 +31,8 @@ const Index = () => (
     <HowItWorksSection />
     <LiaChatSection />
     <LiaSchedulingSection />
+    <ZapSignAdvBoxSection />
+    <PostContractSection />
     <KanbanSection />
     <DashboardSection />
     <ConnectSection />
