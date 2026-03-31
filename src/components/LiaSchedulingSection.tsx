@@ -118,7 +118,7 @@ const LiaSchedulingSection = () => {
                     <span className="text-xs font-syne font-bold text-white-off">LIA via WhatsApp</span>
                   </div>
                   <p className="text-xs text-muted-foreground leading-relaxed">
-                    Olá Ana! Sua consulta com o Dr. Silva foi confirmada para <strong className="text-primary">terça, 14h</strong>. Até lá! ✅
+                    Olá Ana! Sua reunião com o Dr. Silva foi confirmada para <strong className="text-primary">terça, 14h</strong>. Até lá! ✅
                   </p>
                 </motion.div>
               )}
