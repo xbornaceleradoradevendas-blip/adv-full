@@ -26,14 +26,14 @@ const rows: Row[] = [
 ];
 
 const renderCell = (value: CellValue) => {
-  if (value === true) return <Check className="w-5 h-5 text-primary" />;
-  if (value === false) return <X className="w-5 h-5 text-destructive/60" />;
-  if (value === "partial") return <Minus className="w-5 h-5 text-muted-foreground" />;
-  return <span className="text-sm text-muted-foreground">{value}</span>;
+  if (value === true) return <Check className="w-4 h-4 md:w-5 md:h-5 text-primary" />;
+  if (value === false) return <X className="w-4 h-4 md:w-5 md:h-5 text-destructive/60" />;
+  if (value === "partial") return <Minus className="w-4 h-4 md:w-5 md:h-5 text-muted-foreground" />;
+  return <span className="text-xs md:text-sm text-muted-foreground">{value}</span>;
 };
 
 const ComparisonTableSection = () => (
-  <section className="py-28 px-6 md:px-8 bg-secondary">
+  <section className="py-28 px-4 md:px-8 bg-secondary">
     <div className="max-w-5xl mx-auto">
       <div className="text-center mb-14">
         <SectionLabel text="Comparativo" center />
@@ -56,25 +56,25 @@ const ComparisonTableSection = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="overflow-x-auto"
+        className="overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0"
       >
-        <table className="w-full border-collapse">
+        <table className="w-full border-collapse min-w-[480px]">
           <thead>
             <tr>
-              <th className="text-left py-4 px-5 text-xs font-syne font-bold tracking-[0.15em] uppercase text-muted-foreground">
+              <th className="text-left py-3 md:py-4 px-2 md:px-5 text-[0.6rem] md:text-xs font-syne font-bold tracking-[0.1em] md:tracking-[0.15em] uppercase text-muted-foreground">
                 Funcionalidade
               </th>
-              <th className="py-4 px-5 text-center">
-                <div className="font-display text-xl text-primary tracking-wider">AdvFull</div>
-                <div className="text-[0.65rem] text-muted-foreground uppercase tracking-widest mt-0.5">Solução completa</div>
+              <th className="py-3 md:py-4 px-1.5 md:px-5 text-center">
+                <div className="font-display text-base md:text-xl text-primary tracking-wider">AdvFull</div>
+                <div className="text-[0.5rem] md:text-[0.65rem] text-muted-foreground uppercase tracking-widest mt-0.5">Solução completa</div>
               </th>
-              <th className="py-4 px-5 text-center">
-                <div className="font-syne text-sm font-bold text-muted-foreground">Ferramentas de IA</div>
-                <div className="text-[0.65rem] text-muted-foreground uppercase tracking-widest mt-0.5">Isoladas</div>
+              <th className="py-3 md:py-4 px-1.5 md:px-5 text-center">
+                <div className="font-syne text-[0.65rem] md:text-sm font-bold text-muted-foreground">Ferramentas de IA</div>
+                <div className="text-[0.5rem] md:text-[0.65rem] text-muted-foreground uppercase tracking-widest mt-0.5">Isoladas</div>
               </th>
-              <th className="py-4 px-5 text-center">
-                <div className="font-syne text-sm font-bold text-muted-foreground">Agências Comuns</div>
-                <div className="text-[0.65rem] text-muted-foreground uppercase tracking-widest mt-0.5">Genéricas</div>
+              <th className="py-3 md:py-4 px-1.5 md:px-5 text-center">
+                <div className="font-syne text-[0.65rem] md:text-sm font-bold text-muted-foreground">Agências Comuns</div>
+                <div className="text-[0.5rem] md:text-[0.65rem] text-muted-foreground uppercase tracking-widest mt-0.5">Genéricas</div>
               </th>
             </tr>
           </thead>
@@ -88,14 +88,14 @@ const ComparisonTableSection = () => (
                 transition={{ duration: 0.35, delay: i * 0.05 }}
                 className="border-t border-border group hover:bg-card/50 transition-colors"
               >
-                <td className="py-4 px-5 text-[0.88rem] text-white-off font-medium">{row.feature}</td>
-                <td className="py-4 px-5">
+                <td className="py-3 md:py-4 px-2 md:px-5 text-[0.7rem] md:text-[0.88rem] text-white-off font-medium">{row.feature}</td>
+                <td className="py-3 md:py-4 px-1.5 md:px-5">
                   <div className="flex justify-center">{renderCell(row.advfull)}</div>
                 </td>
-                <td className="py-4 px-5">
+                <td className="py-3 md:py-4 px-1.5 md:px-5">
                   <div className="flex justify-center">{renderCell(row.tools)}</div>
                 </td>
-                <td className="py-4 px-5">
+                <td className="py-3 md:py-4 px-1.5 md:px-5">
                   <div className="flex justify-center">{renderCell(row.agencies)}</div>
                 </td>
               </motion.tr>
