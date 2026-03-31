@@ -107,12 +107,12 @@ const KanbanSection = () => {
 
         <div className="grid grid-cols-4 gap-1 mb-4">
           {stages.map((s, i) => (
-            <div key={i} className="text-center text-xs text-muted-foreground">{s.name}</div>
+            <div key={i} className="text-center text-[0.6rem] md:text-xs text-muted-foreground">{s.name}</div>
           ))}
         </div>
 
         {/* Kanban board */}
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4">
           {stages.map((stage, si) => {
             const stageLeads = leads.filter((l) => l.stage === si);
             return (
@@ -122,14 +122,14 @@ const KanbanSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: si * 0.1 }}
-                className={`bg-card border ${stage.color} rounded-lg p-4 min-h-[220px]`}
+                className={`bg-card border ${stage.color} rounded-lg p-2.5 md:p-4 min-h-[160px] md:min-h-[220px]`}
               >
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-2 font-syne font-bold text-sm text-white-off">
-                    <span>{stage.emoji}</span>
-                    {stage.name}
+                <div className="flex items-center justify-between mb-3 md:mb-4">
+                  <div className="flex items-center gap-1.5 md:gap-2 font-syne font-bold text-[0.7rem] md:text-sm text-white-off">
+                    <span className="text-sm md:text-base">{stage.emoji}</span>
+                    <span className="truncate">{stage.name}</span>
                   </div>
-                  <span className="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-full">
+                  <span className="text-[0.6rem] md:text-xs bg-primary/10 text-primary px-1.5 md:px-2 py-0.5 rounded-full">
                     {stageLeads.length}
                   </span>
                 </div>
@@ -147,17 +147,17 @@ const KanbanSection = () => {
                       }}
                       exit={{ opacity: 0, scale: 0.8, x: 50 }}
                       transition={{ duration: 0.4, layout: { duration: 0.4 } }}
-                      className="bg-background border border-border rounded-lg p-3 mb-2"
+                      className="bg-background border border-border rounded-lg p-2 md:p-3 mb-2"
                     >
-                      <div className="flex items-center gap-2 mb-1">
-                        <div className="w-7 h-7 rounded-full bg-primary/20 flex items-center justify-center text-[0.6rem]">👤</div>
-                        <div>
-                          <div className="text-xs font-syne font-bold text-white-off">{lead.name}</div>
-                          <div className="text-[0.65rem] text-muted-foreground">{lead.phone}</div>
+                      <div className="flex items-center gap-1.5 md:gap-2 mb-1">
+                        <div className="w-5 h-5 md:w-7 md:h-7 rounded-full bg-primary/20 flex items-center justify-center text-[0.45rem] md:text-[0.6rem]">👤</div>
+                        <div className="min-w-0">
+                          <div className="text-[0.6rem] md:text-xs font-syne font-bold text-white-off truncate">{lead.name}</div>
+                          <div className="text-[0.5rem] md:text-[0.65rem] text-muted-foreground truncate">{lead.phone}</div>
                         </div>
                       </div>
-                      <span className="inline-block text-[0.6rem] bg-primary/10 text-primary px-1.5 py-0.5 rounded mt-1">{lead.area}</span>
-                      <div className="text-[0.65rem] text-muted-foreground mt-1">{lead.desc}</div>
+                      <span className="inline-block text-[0.5rem] md:text-[0.6rem] bg-primary/10 text-primary px-1 md:px-1.5 py-0.5 rounded mt-1">{lead.area}</span>
+                      <div className="text-[0.5rem] md:text-[0.65rem] text-muted-foreground mt-1 line-clamp-2">{lead.desc}</div>
                     </motion.div>
                   ))}
                 </AnimatePresence>
@@ -167,9 +167,9 @@ const KanbanSection = () => {
         </div>
 
         {/* Bottom labels */}
-        <div className="grid grid-cols-4 gap-4 mt-3">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 mt-3">
           {["Lead entra pelo WhatsApp", "IA qualifica automaticamente", "Contrato enviado via ZapSign", "Negócio fechado! 🎉"].map((t, i) => (
-            <div key={i} className="text-center text-xs text-muted-foreground">{t}</div>
+            <div key={i} className="text-center text-[0.6rem] md:text-xs text-muted-foreground">{t}</div>
           ))}
         </div>
 
