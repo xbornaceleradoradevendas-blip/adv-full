@@ -107,7 +107,7 @@ const KanbanSection = () => {
 
         <div className="grid grid-cols-4 gap-1 mb-4">
           {stages.map((s, i) => (
-            <div key={i} className="text-center text-xs text-muted-foreground">{s.name}</div>
+            <div key={i} className="text-center text-[0.6rem] md:text-xs text-muted-foreground">{s.name}</div>
           ))}
         </div>
 
