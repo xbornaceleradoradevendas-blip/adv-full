@@ -8,6 +8,8 @@ import LiaChatSection from "@/components/LiaChatSection";
 import LiaSchedulingSection from "@/components/LiaSchedulingSection";
 import KanbanSection from "@/components/KanbanSection";
 import DashboardSection from "@/components/DashboardSection";
+import ComparisonTableSection from "@/components/ComparisonTableSection";
+import AppShowcaseSection from "@/components/AppShowcaseSection";
 import {
   ConnectSection,
   SquadSection,
@@ -30,6 +32,8 @@ const Index = () => (
     <KanbanSection />
     <DashboardSection />
     <ConnectSection />
+    <ComparisonTableSection />
+    <AppShowcaseSection />
     <SquadSection />
     <ComplianceSection />
     <ResultsSection />
